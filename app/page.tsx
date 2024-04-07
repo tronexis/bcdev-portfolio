@@ -1,8 +1,6 @@
 import Hero from "@/components/home/Hero"
 
-type Props = {}
-
-const Home = (props: Props) => {
+const Home = () => {
   return (
     <>
       <Hero />
