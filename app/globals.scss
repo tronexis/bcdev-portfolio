@@ -3,15 +3,33 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-rgb: #ffffff;
+  --base-100-rgb: 255, 179, 0;
+  --base-200-rgb: 102, 102, 102;
+  --base-300-rgb: 237, 237, 237;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --background-rgb: #ab0303;
+//     --base-100-rgb: 255, 179, 0;
+//     --base-200-rgb: 255, 255, 255;
+//     --base-300-rgb: 43, 42, 42;
+//   }
+// }
+
+[class="dark"] {
+  --background-rgb: #121212ff;
+  --base-100-rgb: 255, 179, 0;
+  --base-200-rgb: 255, 255, 255;
+  --base-300-rgb: 43, 42, 42;
+}
+
+html,
+body {
+  @apply w-full h-full overflow-auto
+}
+
+body {
+  background-color: var(--background-rgb);
 }
