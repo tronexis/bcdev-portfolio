@@ -1,8 +1,8 @@
+import { DownloadIcon } from "@/components/common/Icon"
 import Certificaton from "@/components/info/Certificaton"
 import CircularProgressBar from "@/components/info/CircularProgressBar"
 import Experience from "@/components/info/Experience"
 import '@/components/info/info.scss'
-import Image from "next/image"
 
 export default async function InfoPage() {
   return (
@@ -32,14 +32,17 @@ export default async function InfoPage() {
           <div className="flex flex-col md:flex-row gap-6">
             <div className="w-full">Email: <b>truepartner312@gmail.com</b></div>
           </div>
-          <div>
-            <button className="p-2 border-2 rounded-full border-base-100 hover:bg-base-100 hover:text-white">Download Resumes</button>
+          <div className="my-8 mx-auto lg:mx-0">
+            <a className="border-2 relative justify-between h-14 w-72 cursor-pointer items-center rounded-full transition-all duration-500 border-base-100 hover:bg-base-100 hover:text-white px-8 flex" href="/resume.pdf" target="_blank">
+              <div className="w-full pr-8 font-extrabold text-center">Download Resumes</div>
+              <div className="absolute right-0 w-14 h-14 flex justify-center items-center rounded-full bg-base-100 text-white"><DownloadIcon /></div>
+            </a>
           </div>
         </div>
         <div className="w-full grid grid-cols-2 grid-rows-2 gap-3 mt-8 lg:mt-0 lg:px-12">
           <div className="border-base-300 border p-3 md:p-5 xl:p-6 rounded-md">
             <div className="text-4xl md:text-5xl text-base-100 xl:text-6xl font-extrabold">
-              8 <span className="text-3xl align-top font-semibold">+</span>
+              10 <span className="text-3xl align-top font-semibold">+</span>
             </div>
             <div className="flex uppercase">
               <div className="w-12 border-t lg:hidden xl:block border-base-100 mt-4 mr-4 hidden md:block" />
@@ -50,7 +53,7 @@ export default async function InfoPage() {
           </div>
           <div className="border-base-300 border p-3 md:p-5 xl:p-6 rounded-md">
             <div className="text-4xl md:text-5xl text-base-100 xl:text-6xl font-extrabold">
-              5 <span className="text-3xl align-top font-semibold">+</span>
+              18 <span className="text-3xl align-top font-semibold">+</span>
             </div>
             <div className="flex uppercase">
               <div className="w-12 border-t lg:hidden xl:block border-base-100 mt-4 mr-4 hidden md:block" />
@@ -61,7 +64,7 @@ export default async function InfoPage() {
           </div>
           <div className="border-base-300 border p-3 md:p-5 xl:p-6 rounded-md">
             <div className="text-4xl md:text-5xl text-base-100 xl:text-6xl font-extrabold">
-              5 <span className="text-3xl align-top font-semibold">+</span>
+              7 <span className="text-3xl align-top font-semibold">+</span>
             </div>
             <div className="flex uppercase">
               <div className="w-12 border-t lg:hidden xl:block border-base-100 mt-4 mr-4 hidden md:block" />
@@ -156,8 +159,8 @@ export default async function InfoPage() {
       <div className="mt-12 flex flex-col gap-12 lg:pr-12">
         <div className="md:text-3xl text-2xl font-bold text-base-200 uppercase">Certification</div>
         <div className="flex flex-col lg:flex-row justify-around gap-4 mx-auto lg:mx-0">
-          <Certificaton title="api" description="sdfasdf" image="/img/cert1.png" link="https://www.hackerrank.com/certificates/037de8bb3f0c"/>
-          <Certificaton title="api" description="sdfasdf" image="/img/cert2.png" link="https://www.hackerrank.com/certificates/b7583f6c1ed0"/>
+          <Certificaton title="api" description="sdfasdf" image="/img/cert1.png" link="https://www.hackerrank.com/certificates/037de8bb3f0c" />
+          <Certificaton title="api" description="sdfasdf" image="/img/cert2.png" link="https://www.hackerrank.com/certificates/b7583f6c1ed0" />
         </div>
       </div>
     </div>

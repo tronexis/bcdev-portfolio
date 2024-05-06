@@ -31,7 +31,7 @@ export default function ThemeToggle() {
   }, [])
 
   return (
-    <button className="text-base-200 w-9 h-9 flex flex-col justify-center items-center rounded-full bg-base-400" onClick={() => {
+    <button className="text-base-200 w-10 h-10 flex flex-col justify-center items-center rounded-full bg-base-300" onClick={() => {
       handleChange(theme === 'system' ? 'light' : theme === 'light' ? 'dark' : 'system')
     }}>
       {
