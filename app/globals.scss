@@ -6,23 +6,20 @@
   --background-rgb: #ffffff;
   --base-100-rgb: 255, 179, 0;
   --base-200-rgb: 102, 102, 102;
-  --base-300-rgb: 237, 237, 237;
+  --base-300-rgb: 225, 225, 225;
+  --base-400: #ffffff;
 }
 
-// @media (prefers-color-scheme: dark) {
-//   :root {
-//     --background-rgb: #ab0303;
-//     --base-100-rgb: 255, 179, 0;
-//     --base-200-rgb: 255, 255, 255;
-//     --base-300-rgb: 43, 42, 42;
-//   }
-// }
-
 [class="dark"] {
-  --background-rgb: #121212ff;
+  --background-rgb: #111;
   --base-100-rgb: 255, 179, 0;
   --base-200-rgb: 255, 255, 255;
   --base-300-rgb: 43, 42, 42;
+  --base-400: #454545ff;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 html,
@@ -32,4 +29,39 @@ body {
 
 body {
   background-color: var(--background-rgb);
+}
+
+
+::-webkit-scrollbar {
+  width: 12px;
+  /* width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-rgb);
+  /* color of the tracking area */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(var(--base-300-rgb));
+  /* color of the scroll thumb */
+  border-radius: 20px;
+  /* roundness of the scroll thumb */
+  border: 3px solid var(--background-rgb);
+  /* creates padding around scroll thumb */
+}
+
+
+.hero-photo {
+  background-image: url('/img/nacho_746X1020.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-photo-mobile {
+  background-image: url('/img/nacho_746X746.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }

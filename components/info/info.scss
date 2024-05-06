@@ -1,0 +1,11 @@
+.shap-circle {
+  clip-path: circle(50%);
+}
+
+.time-line {
+  @apply relative;
+  &::after {
+    content: "";
+    @apply w-[1px] h-full bg-base-200 opacity-40 absolute top-0 left-[-26px] z-0 hidden md:block;
+  }
+}

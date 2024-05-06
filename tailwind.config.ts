@@ -13,7 +13,8 @@ const config: Config = {
       colors: {
         "base-100": "rgb(var(--base-100-rgb))",
         "base-200": "rgb(var(--base-200-rgb))",
-        "base-300": "rgb(var(--base-300-rgb))"
+        "base-300": "rgb(var(--base-300-rgb))",
+        "base-400": "var(--base-400)",
       }
     },
   },
